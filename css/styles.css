@@ -76,7 +76,9 @@ p {
   margin-bottom: 2em;
   font-weight: 300;
 }
-
+p#what {
+  text-align: right;
+}
 p.small-txt {
   font-size: 80%;
 }
@@ -147,9 +149,7 @@ header {
   min-height: 80vh;
 }
 
-nav {
-  margin-top: 4em;
-}
+
 
 nav::after {
   visibility: hidden;
@@ -179,7 +179,8 @@ nav li {
   width: 24.95%;
   max-width: 110px;
   border-bottom: none;
-  display: inline-block;
+  display: block;
+  margin:0 auto;
 }
 
 
@@ -225,7 +226,7 @@ nav a:hover {
 .group { zoom:1; /* For IE 6/7 */ }
 
 .span_1_of_2 {
-  width: 48.2%;
+  width: 100%;
 }
 .span_2_of_2{
   width: 100%;
@@ -309,7 +310,7 @@ input.button:hover {
 }
 
 .nwsltr-input {
-    width: 80%;
+    width: 100%;
     display: block;
     border: 1px solid #c0af8e;
     border-radius: 3px;
@@ -317,10 +318,11 @@ input.button:hover {
     padding: 8px;
     margin: 0 0 10px 0;
     font-size: 100%;
-    float: left;
+
 }
 
 .nwsltr-btn {
+  display: block;
     background-color: #871719;
     border-radius: 3px;
     color: #FFFFFF;
@@ -329,9 +331,9 @@ input.button:hover {
     text-transform: uppercase;
     font-weight: 700;
     height: 40px;
-    width: 18%;
+    width: 100%;
     margin: 0 0 10px 0;
-    float: right;
+    float: right ;
 }
 
 .nwsltr-btn:hover {
@@ -375,4 +377,39 @@ input.button:hover {
 
 .red {
   color: #871719;
+}
+
+footer {
+background-color: #871719;
+color: white;
+height:130px;
+}
+footer a:hover {
+  cursor: pointer;
+  color: red;
+}
+
+@media only screen and (min-width: 994px) {
+  .span_1_of_2 {
+    width: 49.2%;
+  }
+
+  nav {
+    margin-top: 50px;
+  }
+
+  nav li {
+    display: inline-block;
+
+  }
+
+  .nwsltr-btn {
+    width: 18%;
+    float:right;
+  }
+
+  .nwsltr-input {
+    width:60%;
+    float:left;
+  }
 }
